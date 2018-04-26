@@ -10,6 +10,8 @@ import App from '../app.vue'
 import TurbolinksAdapter from 'vue-turbolinks'
 import VueResource from 'vue-resource'
 
+Vue.use(VueResource)
+
 document.addEventListener('turbolinks:load', () => {
   var element = document.getElementById('team-form')
 
@@ -17,7 +19,6 @@ document.addEventListener('turbolinks:load', () => {
 
     const app = new Vue({
       el: element,
-      render: h => h(App)
     })
 
     console.log(app)
